@@ -1,6 +1,6 @@
 {
   "name": "normalize-hex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Normalize a hex string",
   "main": "index.js",
   "scripts": {

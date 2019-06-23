@@ -8,7 +8,7 @@
 ## Install
 
 ```bash
-npm i normalize-hex
+npm install normalize-hex
 ```
 
 ## Getting started
@@ -16,7 +16,7 @@ npm i normalize-hex
 ```javascript
 const normalizeHex = require('normalize-hex')
 
-console.log(normalizeHex('abc')), // 'abc'
+console.log(normalizeHex('abc')) // 'abc'
 console.log(normalizeHex('abc', { evenLength: true })) // '0abc'
 console.log(normalizeHex('abc', { addPrefix: true })) // '0xabc'
 console.log(normalizeHex('abc', { evenLength: true, addPrefix: true })) // '0x0abc'
