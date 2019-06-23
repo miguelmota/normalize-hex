@@ -5,7 +5,6 @@ function normalizeHex (hex, opts) {
     ...opts
   }
 
-  let result = null
   let value = ''
 
   if (Buffer.isBuffer(hex)) {
@@ -26,14 +25,14 @@ function normalizeHex (hex, opts) {
 
   const data = (value.length % 2) ? `0${value}` : value
   if (Buffer.from(data, 'hex')) {
-    result = opts.evenLength ? data : value
+    value = opts.evenLength ? data : value
   }
 
-  if (typeof result === 'string' && opts.addPrefix) {
-    result = `0x${result}`
+  if (opts.addPrefix) {
+    value = `0x${value}`
   }
 
-  return result
+  return value
 }
 
 module.exports = normalizeHex
