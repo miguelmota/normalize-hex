@@ -23,6 +23,12 @@ console.log(normalizeHex('abc', { evenLength: true, addPrefix: true })) // '0x0a
 console.log(normalizeHex('0xabc')) // 'abc'
 ```
 
+## Test
+
+```bash
+npm test
+```
+
 ## License
 
 [MIT](LICENSE)
