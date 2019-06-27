@@ -23,6 +23,10 @@ function normalizeHex (hex, opts) {
     value = value.slice(2)
   }
 
+  if (value === '') {
+    value = '0'
+  }
+
   const data = (value.length % 2) ? `0${value}` : value
   if (Buffer.from(data, 'hex')) {
     value = opts.evenLength ? data : value
