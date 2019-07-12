@@ -2,7 +2,7 @@ const test = require('tape')
 const normalizeHex = require('../')
 
 test('normalizeHex', t => {
-  t.plan(19)
+  t.plan(20)
 
   t.equal(normalizeHex(), '0')
   t.equal(normalizeHex(null), '0')
@@ -23,4 +23,5 @@ test('normalizeHex', t => {
   t.equal(normalizeHex('0xabc'), 'abc')
   t.equal(normalizeHex('', {evenLength: true, addPrefix: true}), '0x00')
   t.equal(normalizeHex('0x', {evenLength: true, addPrefix: true}), '0x00')
+  t.equal(normalizeHex('0x4d703b30964c3581dd015fa5efa9e9216f3ae98cf37a7d3a06ccda02d858ff01', {addPrefix: true}), '0x4d703b30964c3581dd015fa5efa9e9216f3ae98cf37a7d3a06ccda02d858ff01')
 })
